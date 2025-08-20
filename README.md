@@ -2,7 +2,7 @@
 
 ## Restrict Browser Accessibility for User
 
-See [`restrict-frontend.php`](url:restrict-frontend.php) for an example of restricting frontend access for specific users.
+See [`restrict-frontend.php`](url:https://github.com/narenjadav-e2m/code-stacks/blob/main/restrict-frontend.php) for an example of restricting frontend access for specific users.
 
 ## High-Resolution YouTube Thumbnails
 
