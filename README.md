@@ -1,4 +1,4 @@
-# code-stacks
+# Code Base and Snippets
 
 ## High-Resolution YouTube Thumbnails
 
