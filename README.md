@@ -1,5 +1,9 @@
 # Code Base and Snippets
 
+## Restrict Browser Accessibility for User
+
+See [`restrict-frontend.php`](url:restrict-frontend.php) for an example of restricting frontend access for specific users.
+
 ## High-Resolution YouTube Thumbnails
 
 You can easily retrieve YouTube video thumbnails in different resolutions by replacing `<VIDEO_ID>` with the actual video’s ID in the URLs below:
