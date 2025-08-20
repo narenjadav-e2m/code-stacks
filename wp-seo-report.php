@@ -4,7 +4,7 @@
 Plugin Name: WP SEO Report (CSV Export)
 Description: Export a CSV report of published entries and their Rank Math SEO data.
 Version: 1.0
-Author: E2M
+Author: Naren J
 */
 
 // Exit if accessed directly.
