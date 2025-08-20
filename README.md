@@ -2,7 +2,11 @@
 
 ## Restrict Browser Accessibility for User
 
-See [`restrict-frontend.php`](restrict-frontend.php) for an example of restricting frontend access for specific users.
+See [`restrict-frontend.php`](restrict-frontend.php)
+
+## Generate Post/Page/CPT SEO report with RankMath SEO data.
+
+See [`wp-seo-report.php`](wp-seo-report.php)
 
 ## High-Resolution YouTube Thumbnails
 
