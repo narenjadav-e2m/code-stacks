@@ -8,6 +8,10 @@ See [`restrict-frontend.php`](restrict-frontend.php)
 
 See [`wp-seo-report.php`](wp-seo-report.php)
 
+## Generate list of Gravity Form usage
+
+See [`gravity-form-usage.php`](gravity-form-usage.php)
+
 ## High-Resolution YouTube Thumbnails
 
 You can easily retrieve YouTube video thumbnails in different resolutions by replacing `<VIDEO_ID>` with the actual video’s ID in the URLs below:
