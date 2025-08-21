@@ -23,7 +23,11 @@ function list_gf_usage() {
     ");
 
     echo '<div class="wrap"><h1>Gravity Forms Usage</h1>';
-    echo '<table class="widefat striped"><thead>
+
+    // Add download button
+    echo '<p><button id="download-csv" class="button">Download CSV</button></p>';
+
+    echo '<table id="gf-usage-table" class="widefat striped"><thead>
             <tr>
                 <th>Post Title</th>
                 <th>URL</th>
@@ -50,11 +54,39 @@ function list_gf_usage() {
         if (!empty($unique_ids)) {
             echo '<tr>
                 <td>' . esc_html($post->post_title) . '</td>
-                <td><a href="' . esc_url(get_permalink($post->ID)) . '" target="_blank">' . esc_html(get_permalink($post->ID)) . '</a></td>
+                <td>' . esc_url(get_permalink($post->ID)) . '</td>
                 <td>' . esc_html(implode(', ', $unique_ids)) . '</td>
             </tr>';
         }
     }
 
     echo '</tbody></table></div>';
+
+    // JS for CSV download
+    ?>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('download-csv').addEventListener('click', function() {
+            var table = document.getElementById('gf-usage-table');
+            var csv = [];
+            for (var i = 0; i < table.rows.length; i++) {
+                var row = [], cols = table.rows[i].cells;
+                for (var j = 0; j < cols.length; j++) {
+                    // Escape quotes and enclose in double-quotes
+                    row.push('"' + cols[j].innerText.replace(/"/g, '""') + '"');
+                }
+                csv.push(row.join(','));
+            }
+            var csv_file = new Blob([csv.join('\n')], {type: 'text/csv'});
+            var download_link = document.createElement('a');
+            download_link.download = 'gravity-forms-usage.csv';
+            download_link.href = window.URL.createObjectURL(csv_file);
+            download_link.style.display = 'none';
+            document.body.appendChild(download_link);
+            download_link.click();
+            document.body.removeChild(download_link);
+        });
+    });
+    </script>
+    <?php
 }
